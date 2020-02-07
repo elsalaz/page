@@ -1,0 +1,182 @@
+@media (max-width: 1700px) {
+  .myModel {
+    width: 480px;
+    height: 333px;
+  }
+}
+@media (max-width: 1600px) {
+  .myModel {
+    width: 445px;
+    height: 309px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .myModel {
+    width: 400px;
+    height: 277px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .myModel {
+    width: 350px;
+    height: 243px;
+  }
+  .display-3 {
+    font-size: 350%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .elemento3D {
+    display: none;
+  }
+  .myModel {
+    width: 300px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .myModel {
+    width: 243px;
+    height: 243px;
+  }
+
+  .MyImagen {
+    display: none;
+  }
+
+  .display-3 {
+    font-size: 300%;
+  }
+}
+@media (max-width: 900px) {
+  .myModel {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .MyHerramientas {
+    display: none;
+  }
+}
+
+@media (max-width: 770px) {
+  .myModel {
+    width: 150px;
+    height: 150px;
+  }
+  .myPorcentaje {
+    display: none;
+  }
+
+  .nav-pills > li > a {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 770px) and (min-width: 768px) {
+  .myModel {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 675px) {
+  .myModel {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 670px) and (min-width: 590px) {
+  .myModel {
+    width: 220px;
+    height: 220px;
+  }
+
+  .nav-pills > li > a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 589px) and (min-width: 576px) {
+  .myModel {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 575px) and (min-width: 451px) {
+  .myModel {
+    width: 350px;
+    height: 310px;
+  }
+  .modal-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .myModel {
+    width: 300px;
+    height: 300px;
+  }
+  .myParrafo {
+    font-size: 15px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .nav-pills > li > a {
+    font-size: 13px;
+  }
+  .display-3 {
+    font-size: 250%;
+  }
+
+  .myHabilidad {
+    font-size: 15px;
+  }
+
+  .titulos {
+    font-size: 30px;
+  }
+
+  .myNombre {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 340px) {
+  .myModel {
+    width: 250px;
+    height: 250px;
+  }
+
+  .myParrafo {
+    font-size: 13px;
+  }
+
+  .display-3 {
+    font-size: 230%;
+  }
+
+  .myNombre {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 330px) {
+  .myDescargar {
+    font-size: 15px;
+  }
+}

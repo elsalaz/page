@@ -1,0 +1,84 @@
+#myLoader {
+  height: 100%;
+  width: 100%;
+  background: #3aafa9;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+#myLoader h1 {
+  font-size: 70px;
+  color: #fff;
+  font-family: initial;
+}
+
+@media (max-width: 550px) and (min-width: 470px) {
+  #myLoader h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 469px) {
+  #myLoader h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  #myLoader h1 {
+    font-size: 35px;
+  }
+}
+#myLoader h1:hover {
+  color: #17252a;
+}
+
+#myLoader h1 span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce 0.35s ease infinite alternate;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+#myLoader h1 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+#myLoader h1 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+#myLoader h1 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+#myLoader h1 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+#myLoader h1 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+#myLoader h1 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+#myLoader h1 span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+#myLoader h1 span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+#myLoader h1 span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+#myLoader h1 span:nth-child(11) {
+  animation-delay: 1s;
+}
+@keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+      0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6);
+  }
+}

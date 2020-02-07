@@ -1,0 +1,219 @@
+html {
+  -ms-scroll-behavior: smoth;
+  scroll-behavior: smooth;
+  touch-action: none;
+}
+
+body {
+  background: #3aafa9;
+  transition: 1.5s;
+}
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+li {
+  display: list-item;
+}
+.myNavColor {
+  -webkit-background: rgb(43, 122, 120, 0.1);
+  -moz-background: rgb(43, 122, 120, 0.1);
+  -ms-background: rgba(2, 3, 3, 0.95);
+  background: rgb(43, 122, 120, 0.1);
+}
+.top-nav-collapse {
+  -ms-background: rgb(23, 37, 42, 0.95) !important;
+  background: rgb(23, 37, 42, 0.95) !important;
+}
+
+.color-azul {
+  background-color: #3aafa9;
+}
+.color-blanco {
+  background-color: #feffff;
+}
+.myInicio {
+  display: none;
+  margin-top: 150px;
+}
+.myWho {
+  display: none;
+}
+.navbar {
+  display: none;
+}
+.myModelados {
+  display: none;
+}
+.myAplicaciones {
+  display: none;
+}
+.MyFooter {
+  display: none;
+  background-color: #17252a;
+}
+.MyDatos {
+  display: none;
+  background-color: #3aafa9;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.MyContacto {
+  display: none;
+  background-color: #17252a;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+.MyRenders {
+  display: none;
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+.MyFormulario {
+  padding-top: 40px;
+}
+.mydatos {
+  color: #17252a;
+}
+.myGallery {
+  padding-top: 50px;
+}
+.single-album {
+  position: relative;
+  overflow: hidden;
+}
+.album-img {
+  position: relative;
+  overflow: hidden;
+}
+.album-img img {
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.single-album:hover .album-img img {
+  transform: scale(1.1, 1.1);
+  filter: grayscale(60%);
+}
+.nav-pills > li > a.active {
+  background-color: #3aafa9 !important;
+  color: #ffffff !important;
+}
+
+.nav-pills > li > a {
+  color: #17252a;
+}
+.myServicios1:hover {
+  color: #e91e63;
+}
+.myServicios2:hover {
+  color: #00bcd4;
+}
+.myHabilidades:hover {
+  color: #00bcd4;
+}
+.myOpacity:hover {
+  opacity: 0.85;
+}
+.titulos {
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.titulos2 {
+  letter-spacing: 1px;
+}
+
+.fa-cube {
+  transition: 2s;
+}
+.fa-cube:hover {
+  color: #212121 !important;
+  transform: rotate(359deg);
+}
+.fa-desktop {
+  transition: 2s;
+}
+.fa-desktop:hover {
+  color: #212121 !important;
+  transform: rotate(359deg);
+}
+.fa-code {
+  transition: 2s;
+}
+.fa-code:hover {
+  color: #212121 !important;
+  transform: rotate(359deg);
+}
+.fa-phone {
+  transition: 1s;
+}
+.fa-phone:hover {
+  color: #def2f1 !important;
+  transform: rotate(359deg);
+}
+.fa-globe-americas {
+  transition: 1s;
+}
+.fa-globe-americas:hover {
+  color: #def2f1 !important;
+  transform: rotate(359deg);
+}
+.fa-envelope {
+  transition: 1s;
+}
+.fa-envelope:hover {
+  color: #def2f1 !important;
+  transform: rotate(359deg);
+}
+.fa-check-square {
+  font-size: 18px;
+}
+.color-facebook:hover {
+  color: #3b5998 !important;
+}
+.color-twitter:hover {
+  color: #00acee !important;
+}
+.color-instagram:hover {
+  color: #3f729b !important;
+}
+.color-linkedin:hover {
+  color: #0e76a8 !important;
+}
+.color-google:hover {
+  color: #db4a39 !important;
+}
+.color-pinterest:hover {
+  color: #c8232c !important;
+}
+.color-youtube:hover {
+  color: #c4302b !important;
+}
+
+.progress-bar {
+  width: 0;
+  animation: progress 2s ease-in-out forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.myTituloModelados {
+  font-size: 40px;
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+.myTituloAplicaciones {
+  font-size: 40px;
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+.mySpantext {
+  font-size: 16px;
+}
