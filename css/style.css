@@ -1,13 +1,14 @@
 html {
   -ms-scroll-behavior: smoth;
   scroll-behavior: smooth;
-  touch-action: none;
+  touch-action: pan-y;
 }
 
 body {
   background: #3aafa9;
   transition: 1.5s;
 }
+
 ul {
   list-style-type: none;
   text-align: left;
@@ -31,6 +32,11 @@ li {
 }
 .color-blanco {
   background-color: #feffff;
+}
+.mySalaz {
+  font-family: "Galada", cursive;
+}
+.display-3 {
 }
 .myInicio {
   display: none;
@@ -121,6 +127,7 @@ li {
 }
 .titulos2 {
   letter-spacing: 1px;
+  font-family: "Roboto Slab", serif;
 }
 
 .fa-cube {
