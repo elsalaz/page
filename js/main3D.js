@@ -97,7 +97,6 @@ function init() {
   controls.enablePan = false;
   controls.enableZoom = false;
 
-
   controls.update();
 
   //LIGHTS
