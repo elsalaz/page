@@ -1,5 +1,5 @@
 html {
-  -ms-scroll-behavior: smoth;
+  -ms-scroll-behavior: smoth !important;
   scroll-behavior: smooth;
   touch-action: pan-y;
 }
@@ -19,7 +19,7 @@ li {
 .myNavColor {
   -webkit-background: rgb(43, 122, 120, 0.1);
   -moz-background: rgb(43, 122, 120, 0.1);
-  -ms-background: rgba(2, 3, 3, 0.95);
+  -ms-background: rgba(2, 3, 3, 0.95) !important;
   background: rgb(43, 122, 120, 0.1);
 }
 .top-nav-collapse {
@@ -196,7 +196,9 @@ li {
 .color-youtube:hover {
   color: #c4302b !important;
 }
-
+.color-whatsapp:hover {
+  color: #4fce5d !important;
+}
 .progress-bar {
   width: 0;
   animation: progress 2s ease-in-out forwards;
