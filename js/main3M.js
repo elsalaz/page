@@ -2,8 +2,8 @@ if (!Detector.webgl) Detector.addGetWebGLMessage();
 
 var containerM, stats, controls;
 var cameraM, sceneM, rendererM, light;
-var ancho = 400;
-var alto = 400;
+var ancho = 500;
+var alto = 500;
 var niebla;
 var clock = new THREE.Clock();
 
