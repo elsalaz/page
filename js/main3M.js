@@ -64,6 +64,7 @@ function init() {
   //scene.add( mesh );*/
 
   // model
+
   var loader = new THREE.FBXLoader();
   loader.load("fbx/Idle.fbx", function(object) {
     object.mixer = new THREE.AnimationMixer(object);
@@ -104,7 +105,6 @@ function onWindowResize() {
 
 function animateM() {
   requestAnimationFrame(animateM);
-
   if (mixers.length > 0) {
     for (var i = 0; i < mixers.length; i++) {
       mixers[i].update(clock.getDelta());

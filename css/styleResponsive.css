@@ -24,7 +24,7 @@
     height: 243px;
   }
   .display-3 {
-    font-size: 350%;
+    font-size: 360%;
   }
 }
 
@@ -49,7 +49,8 @@
   }
 
   .display-3 {
-    font-size: 300%;
+    font-size: 320%;
+    text-shadow: 2.5px 1.5px 0px #d5d5d5, 7px 6px 0px rgba(0, 0, 0, 0.15);
   }
 }
 @media (max-width: 900px) {
@@ -140,7 +141,7 @@
     font-size: 13px;
   }
   .display-3 {
-    font-size: 250%;
+    font-size: 260%;
   }
 
   .myHabilidad {
@@ -167,7 +168,7 @@
   }
 
   .display-3 {
-    font-size: 230%;
+    font-size: 240%;
   }
 
   .myNombre {
