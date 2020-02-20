@@ -3,12 +3,19 @@ html {
   scroll-behavior: smooth;
   touch-action: pan-y;
 }
-
+.section {
+  transition: 2s;
+}
 body {
   background: #3aafa9;
-  transition: 1.5s;
+  transition: 2s;
 }
-
+#my3M {
+  cursor: pointer;
+}
+#my3D {
+  cursor: pointer;
+}
 ul {
   list-style-type: none;
   text-align: left;
@@ -37,7 +44,16 @@ li {
   font-family: "Galada", cursive;
 }
 .display-3 {
+  transform: skewY(-6deg);
+  transform-origin: bottom left;
+  text-shadow: 3px 2px 0px #d5d5d5, 8px 7px 0px rgba(0, 0, 0, 0.15);
+  transition: 1.5s;
 }
+.display-3:hover {
+  transform: skewY(-3deg);
+  transform-origin: bottom left;
+}
+
 .myInicio {
   display: none;
   margin-top: 150px;
@@ -117,6 +133,9 @@ li {
 }
 .myHabilidades:hover {
   color: #00bcd4;
+}
+
+.myOpacity {
 }
 .myOpacity:hover {
   opacity: 0.85;
