@@ -3,12 +3,12 @@ html {
   scroll-behavior: smooth;
   touch-action: pan-y;
 }
-.section {
-  transition: 2s;
-}
+
 body {
   background: #3aafa9;
-  transition: 2s;
+  transition-duration: 1000ms;
+  transition-property: background;
+  transition-timing-function: ease-in;
 }
 #my3M {
   cursor: pointer;
@@ -22,6 +22,15 @@ ul {
 }
 li {
   display: list-item;
+}
+.navbar {
+  font-family: "Lato", sans-serif;
+}
+.btn {
+  font-family: "Varela Round", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: none;
 }
 .myNavColor {
   -webkit-background: rgb(43, 122, 120, 0.1);
@@ -43,11 +52,39 @@ li {
 .mySalaz {
   font-family: "Galada", cursive;
 }
+.myOpacidad {
+  opacity: 0.8;
+}
+.myOpacidad:hover {
+  opacity: 1;
+}
+.myNombre {
+  font-family: "Josefin Sans", sans-serif;
+}
+.myTexto {
+  font-family: "Open Sans", sans-serif;
+}
+.myTextoM {
+  font-family: "Righteous", cursive;
+  letter-spacing: 0.5px;
+}
+.myTextoA {
+  font-family: "Righteous", cursive;
+  letter-spacing: 0.5px;
+  font-weight: 200;
+}
+.myParrafo {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
 .display-3 {
   transform: skewY(-6deg);
   transform-origin: bottom left;
   text-shadow: 3px 2px 0px #d5d5d5, 8px 7px 0px rgba(0, 0, 0, 0.15);
-  transition: 1.5s;
+  transition-duration: 800ms;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+  font-family: "Merriweather", serif;
 }
 .display-3:hover {
   transform: skewY(-3deg);
@@ -111,11 +148,19 @@ li {
 .album-img img {
   width: 100%;
   box-sizing: border-box;
-  transition: 0.5s;
+  transition-duration: 500ms;
+  transition-property: transform, filter;
+  transition-timing-function: ease-in;
 }
 .single-album:hover .album-img img {
   transform: scale(1.1, 1.1);
   filter: grayscale(60%);
+}
+.nav-pills {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 300;
 }
 .nav-pills > li > a.active {
   background-color: #3aafa9 !important;
@@ -141,55 +186,66 @@ li {
   opacity: 0.85;
 }
 .titulos {
-  letter-spacing: 1px;
-  font-weight: 500;
+  font-family: "Merriweather", sans-serif;
 }
 .titulos2 {
-  letter-spacing: 1px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
 }
 
 .fa-cube {
-  transition: 2s;
+  transition-duration: 1600ms;
+  transition-property: transform, color;
+  transition-timing-function: ease-out;
 }
 .fa-cube:hover {
   color: #212121 !important;
-  transform: rotate(359deg);
+  transform: rotate(360deg);
 }
 .fa-desktop {
-  transition: 2s;
+  transition-duration: 1600ms;
+  transition-property: transform, color;
+  transition-timing-function: ease-out;
 }
 .fa-desktop:hover {
   color: #212121 !important;
-  transform: rotate(359deg);
+  transform: rotate(360deg);
 }
 .fa-code {
-  transition: 2s;
+  transition-duration: 1600ms;
+  transition-property: transform, color;
+  transition-timing-function: ease-out;
 }
 .fa-code:hover {
   color: #212121 !important;
-  transform: rotate(359deg);
+  transform: rotate(360deg);
 }
 .fa-mobile-alt {
-  transition: 1s;
+  transition-duration: 1200ms;
+  transition-property: transform, color;
+  transition-timing-function: cubic-bezier(1, 0.11, 0, 1.7);
 }
 .fa-mobile-alt:hover {
   color: #def2f1 !important;
-  transform: rotate(359deg);
+  transform: rotate(360deg);
 }
 .fa-globe-americas {
-  transition: 1s;
+  transition-duration: 1200ms;
+  transition-property: transform, color;
+  transition-timing-function: cubic-bezier(1, 0.11, 0, 1.7);
 }
 .fa-globe-americas:hover {
   color: #def2f1 !important;
-  transform: rotate(359deg);
+  transform: rotate(360deg);
 }
 .fa-envelope {
-  transition: 1s;
+  transition-duration: 1200ms;
+  transition-property: transform, color;
+  transition-timing-function: cubic-bezier(1, 0.11, 0, 1.7);
 }
 .fa-envelope:hover {
   color: #def2f1 !important;
-  transform: rotate(359deg);
+  transform: rotate(360deg);
 }
 .fa-check-square {
   font-size: 18px;
@@ -220,7 +276,7 @@ li {
 }
 .progress-bar {
   width: 0;
-  animation: progress 2s ease-in-out forwards;
+  animation: progress 2s ease-in forwards;
 }
 
 @keyframes progress {

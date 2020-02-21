@@ -3,7 +3,7 @@ new WOW().init();
 window.onload = function() {
   setTimeout(function() {
     loader();
-  }, 100);
+  }, 1000);
 };
 
 function loader() {
