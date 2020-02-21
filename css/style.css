@@ -7,7 +7,7 @@ html {
 body {
   background: #3aafa9;
   transition-duration: 1000ms;
-  transition-property: background;
+  transition-property: background, background-image;
   transition-timing-function: ease-in;
 }
 #my3M {
