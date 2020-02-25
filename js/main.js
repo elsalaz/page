@@ -1,9 +1,7 @@
 new WOW().init();
 
 window.onload = function() {
-  setTimeout(function() {
-    loader();
-  }, 1000);
+  loader();
 };
 
 function loader() {
@@ -12,7 +10,6 @@ function loader() {
   document.getElementById("myNavbar").style.display = "flex";
   document.getElementById("myInicio").style.display = "flex";
   document.getElementById("myWho").style.display = "flex";
-  //document.getElementById("my3D").style.display = "flex";
   document.getElementById("myModelados").style.display = "flex";
   document.getElementById("myAplicaciones").style.display = "flex";
   document.getElementById("MyRenders").style.display = "flex";
