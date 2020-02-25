@@ -67,6 +67,9 @@
 }
 
 @media (max-width: 770px) {
+  .myInicio {
+    margin-top: 130px;
+  }
   .myModel {
     width: 150px;
     height: 150px;
