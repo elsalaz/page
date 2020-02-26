@@ -14,7 +14,19 @@ body {
   background: linear-gradient(to right, #141e30, #243b55);
 }
 .myButtonDark:hover {
-  transition: 500ms ease-in;
+  transition-property: animation;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in;
+}
+.myButtonPink span {
+  position: absolute;
+}
+
+.myButtonPink:hover > .fa-file-download {
+  animation-name: download;
+  animation-duration: 2500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 .myButtonDark:hover > span {
   color: #feffff;
@@ -284,6 +296,22 @@ li {
 .fa-check-square {
   font-size: 18px;
 }
+.myIconos {
+  transition-property: opacity;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in;
+}
+.myIconos:hover > * {
+  opacity: 0.7;
+}
+.myIconos:hover > *:hover {
+  opacity: 1;
+}
+.color-facebook {
+  transition-property: text-shadow;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in;
+}
 .color-facebook:hover {
   color: #3b5998 !important;
   text-shadow: 0 0 10px rgba(59, 89, 152, 0.2), 0 0 20px #3b5998;
@@ -291,29 +319,51 @@ li {
 .color-twitter:hover {
   color: #00acee !important;
 }
+.color-instagram {
+  transition-property: text-shadow;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in;
+}
 .color-instagram:hover {
   color: #3f729b !important;
-  text-shadow: 0 0 10px rgba(63, 114, 155, 0.2), 0 0 20px #3f729b;
+  text-shadow: 0 0 5px rgba(63, 114, 155, 0.2), 0 0 15px #3f729b;
 }
-.color-linkedin:hover {
+.color-microsoft {
+  transition-property: text-shadow;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in;
+}
+.color-microsoft:hover {
   color: #0e76a8 !important;
-  text-shadow: 0 0 10px rgba(14, 118, 168, 0.2), 0 0 20px #0e76a8;
+  text-shadow: 0 0 5px rgba(14, 118, 168, 0.2), 0 0 15px #0e76a8;
 }
-.color-google:hover {
-  color: #db4a39 !important;
-  text-shadow: 0 0 10px rgba(219, 74, 57, 0.2), 0 0 20px #db4a39;
+
+.color-pinterest {
+  transition-property: text-shadow;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in;
 }
 .color-pinterest:hover {
   color: #c8232c !important;
-  text-shadow: 0 0 10px rgba(200, 35, 44, 0.2), 0 0 20px #c8232c;
+  text-shadow: 0 0 5px rgba(200, 35, 44, 0.2), 0 0 15px #c8232c;
+}
+.color-youtube {
+  transition-property: text-shadow;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in;
 }
 .color-youtube:hover {
   color: #c4302b !important;
-  text-shadow: 0 0 10px rgba(196, 48, 43, 0.2), 0 0 20px #c4302b;
+  text-shadow: 0 0 5px rgba(196, 48, 43, 0.2), 0 0 15px #c4302b;
+}
+.color-whatsapp {
+  transition-property: text-shadow;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in;
 }
 .color-whatsapp:hover {
   color: #4fce5d !important;
-  text-shadow: 0 0 10px rgba(79, 206, 93, 0.2), 0 0 20px #4fce5d;
+  text-shadow: 0 0 5px rgba(79, 206, 93, 0.2), 0 0 15px #4fce5d;
 }
 .progress-bar {
   width: 0;
@@ -337,6 +387,17 @@ li {
     opacity: 0.3;
   }
 }
+@keyframes download {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.9, 0.9);
+  }
+}
+
 .myTituloModelados {
   font-size: 40px;
   margin-top: 140px;
