@@ -6,7 +6,7 @@ html {
 
 body {
   background: #3aafa9;
-  transition-duration: 1000ms;
+  transition-duration: 800ms;
   transition-property: background;
   transition-timing-function: ease-in;
 }
@@ -71,6 +71,7 @@ li {
 }
 .navbar {
   font-family: "Lato", sans-serif;
+  align-items: center;
 }
 .btn {
   font-family: "Varela Round", sans-serif;
@@ -394,20 +395,74 @@ li {
   }
   50% {
     opacity: 0.6;
-    transform: scale(0.9, 0.9);
+    transform: scale(0.93, 0.93);
   }
 }
-
+.fa-telegram-plane:hover {
+}
+@keyframes volar {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(60px, -40px);
+    opacity: 1;
+  }
+  26% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-60px, 40px);
+  }
+  75% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.myButtonEnviar span {
+  position: absolute;
+}
+.myButtonEnviar:hover > span {
+  animation-name: volar;
+  animation-duration: 2500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
 .myTituloModelados {
-  font-size: 40px;
   margin-top: 140px;
   margin-bottom: 80px;
 }
 .myTituloAplicaciones {
-  font-size: 40px;
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+.myTituloGaleria {
   margin-top: 140px;
   margin-bottom: 80px;
 }
 .mySpantext {
   font-size: 16px;
+}
+
+.fa-telegram-plane {
+  transition: 2000ms;
+}
+
+ol.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+}
+ol.carousel-indicators li {
+  background-color: #3aafa9;
 }
