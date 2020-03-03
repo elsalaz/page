@@ -1,28 +1,4 @@
-@media (max-width: 1700px) {
-  .myModel {
-    width: 480px;
-    height: 333px;
-  }
-}
-@media (max-width: 1600px) {
-  .myModel {
-    width: 445px;
-    height: 309px;
-  }
-}
-
-@media (max-width: 1500px) {
-  .myModel {
-    width: 400px;
-    height: 277px;
-  }
-}
-
 @media (max-width: 1400px) {
-  .myModel {
-    width: 350px;
-    height: 243px;
-  }
   .display-3 {
     font-size: 360%;
   }
@@ -32,20 +8,21 @@
   .elemento3D {
     display: none;
   }
-  .myModel {
-    width: 300px;
-    height: 280px;
-  }
 }
 
-@media (max-width: 1050px) {
-  .myModel {
-    width: 243px;
-    height: 243px;
+@media (max-width: 1150px) {
+  .TheModel {
+    height: 340px;
+    width: 480px;
   }
-
+}
+@media (max-width: 1070px) {
   .MyImagen {
     display: none;
+  }
+  .TheModel {
+    height: 330px;
+    width: 450px;
   }
 
   .display-3 {
@@ -53,14 +30,39 @@
     text-shadow: 2.5px 1.5px 0px #d5d5d5, 7px 6px 0px rgba(0, 0, 0, 0.15);
   }
 }
-@media (max-width: 900px) {
-  .myModel {
-    width: 200px;
-    height: 200px;
+
+@media (max-width: 1010px) {
+  .TheModel {
+    height: 310px;
+    width: 420px;
+  }
+}
+
+@media (max-width: 950px) {
+  .TheModel {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 910px) {
+  .TheModel {
+    height: 350px;
+    width: 350px;
+  }
+}
+@media (max-width: 810px) and (min-width: 800px) {
+  .TheModel {
+    height: 360px;
+    width: 480px;
   }
 }
 
 @media (max-width: 800px) {
+  .TheModel {
+    height: 320px;
+    width: 320px;
+  }
   .MyHerramientas {
     display: none;
   }
@@ -79,12 +81,12 @@
 }
 
 @media (max-width: 770px) {
+  .TheModel {
+    height: 300px;
+    width: 300px;
+  }
   .myInicio {
     margin-top: 130px;
-  }
-  .myModel {
-    width: 150px;
-    height: 150px;
   }
   .myPorcentaje {
     display: none;
@@ -95,25 +97,14 @@
   }
 }
 
-@media (max-width: 770px) and (min-width: 768px) {
-  .myModel {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 767px) and (min-width: 675px) {
-  .myModel {
-    width: 280px;
-    height: 280px;
+@media (max-width: 720px) and (min-width: 500px) {
+  .TheModel {
+    height: 310px;
+    width: 420px;
   }
 }
 
 @media (max-width: 670px) and (min-width: 590px) {
-  .myModel {
-    width: 220px;
-    height: 220px;
-  }
   .display-3 {
     text-shadow: 2px 1px 0px #d5d5d5, 6px 5px 0px rgba(0, 0, 0, 0.15);
   }
@@ -123,28 +114,19 @@
   }
 }
 
-@media (max-width: 589px) and (min-width: 576px) {
-  .myModel {
-    width: 250px;
-    height: 250px;
-  }
-}
-
 @media (max-width: 575px) and (min-width: 451px) {
-  .myModel {
-    width: 350px;
-    height: 310px;
-  }
   .modal-title {
     font-size: 20px;
   }
 }
+@media (max-width: 500px) {
+  .TheModel {
+    height: 350px;
+    width: 350px;
+  }
+}
 
 @media (max-width: 450px) {
-  .myModel {
-    width: 300px;
-    height: 300px;
-  }
   .myParrafo {
     font-size: 15px;
   }
@@ -159,6 +141,10 @@
 }
 
 @media (max-width: 390px) {
+  .TheModel {
+    height: 300px;
+    width: 300px;
+  }
   .nav-pills > li > a {
     font-size: 13px;
   }
@@ -180,11 +166,6 @@
 }
 
 @media (max-width: 340px) {
-  .myModel {
-    width: 250px;
-    height: 250px;
-  }
-
   .myParrafo {
     font-size: 13px;
   }
