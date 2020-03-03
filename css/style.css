@@ -3,7 +3,20 @@ html {
   scroll-behavior: smooth;
   touch-action: pan-y;
 }
-
+.model-area {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.single-model {
+  padding: 0 20px 20px;
+}
+.TheModel {
+  height: 360px;
+  width: 520px;
+}
 body {
   background: #3aafa9;
   transition-duration: 800ms;
