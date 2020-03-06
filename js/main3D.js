@@ -3,7 +3,7 @@ if (!Detector.webgl) Detector.addGetWebGLMessage();
 var container, stats, controls;
 var camera, scene, renderer, light;
 //document.body.appendChild( renderer.domElement );
-var ancho = 400;
+var ancho = 600;
 var alto = 600;
 var startTime = Date.now();
 
@@ -34,7 +34,10 @@ function init() {
 
   camera = new THREE.PerspectiveCamera(45, ancho / alto, 1, 2000);
   camera.lookAt(Barco.position);
-  camera.position.set(-300, 180, 150);
+  camera.position.set(150, 0, 150);
+  camera.rotation.x = 15 * (Math.PI / 180);
+  //camera.rotation.y = 165;
+  //camera.rotation.y = (90 * Math.PI) / 180;
 
   scene = new THREE.Scene();
   //scene.background = new THREE.Color(0x3aafa9);
@@ -61,9 +64,28 @@ function init() {
   mesh2.castShadow = true;
   mesh2.receiveShadow = true;
   //scene.add(mesh2);
+  var loader = new THREE.GLTFLoader();
+  loader.load("fbx/5/scene.gltf", function(gltf) {
+    gltf.scene.traverse(function(child) {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
+    car = gltf.scene.children[0];
+
+    car.scale.set(12, 12, 12);
+    car.position.set(80, 40, -80);
+    Barco.add(gltf.scene);
+    Barco.rotation.y = 20 * (Math.PI / 180);
+    Barco.castShadow = true;
+    Barco.receiveShadow = true;
+    scene.add(Barco);
+    animate();
+  });
 
   var loader = new THREE.FBXLoader();
-  loader.load("fbx/Barco_04.fbx", function(object) {
+  loader.load("fbx/14.fbx", function(object) {
     object.traverse(function(child) {
       if (child.isMesh) {
         child.castShadow = true;
@@ -71,9 +93,9 @@ function init() {
       }
     });
 
-    Barco.add(object);
+    //Barco.add(object);
 
-    scene.add(Barco);
+    //scene.add(Barco);
   });
 
   renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -91,38 +113,50 @@ function init() {
 
   controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-  controls.target.set(0, 100, 0);
+  controls.target.set(-100, -50, 0);
   //controls.minDistance = 300;
   //controls.maxDistance = 800;
+  controls.enableRotate = false;
   controls.enablePan = false;
   controls.enableZoom = false;
 
   controls.update();
 
   //LIGHTS
+  lightP1 = new THREE.PointLight(0xff9000, 1);
+  lightP1.position.set(0, 300, 500);
+  scene.add(lightP1);
+  lightP2 = new THREE.PointLight(0x546aff, 1);
+  lightP2.position.set(500, 100, 0);
+  scene.add(lightP2);
+  lightP3 = new THREE.PointLight(0xff9000, 1);
+  lightP3.position.set(0, 100, -500);
+  scene.add(lightP3);
+  lightP4 = new THREE.PointLight(0x546aff, 1);
 
-  //light = new THREE.HemisphereLight( 0xfff68f, 0xfa8072, 0.1);
-  //light.position.set( 0, 200, 0 );
-  //scene.add( light );
+  lightP4.position.set(-500, 300, 500);
+  scene.add(lightP4);
 
-  lightA = new THREE.AmbientLight(0xfff68f, 1);
+  light = new THREE.HemisphereLight(0xffffff, 0x444444);
+  light.castShadow = true;
+  light.position.set(0, 200, 0);
+  //scene.add(light);
+
+  lightDR = new THREE.DirectionalLight(0x450c40, 5);
+  lightDR.position.set(0, 200, 100);
+  lightDR.castShadow = true;
+  lightDR.shadow.camera.top = 180;
+  lightDR.shadow.camera.bottom = -100;
+  lightDR.shadow.camera.left = -120;
+  lightDR.shadow.camera.right = 120;
+  lightDR.shadowMapWidth = 1024;
+  lightDR.shadowMapHeight = 1024;
+  //scene.add(lightDR);
+
+  var lightA = new THREE.AmbientLight(0x514493, 0.5);
   scene.add(lightA);
 
-  light = new THREE.DirectionalLight(0xfff68f, 1.4);
-
-  light.position.set(50, 200, 200);
-  light.castShadow = true;
-  light.shadow.camera.top = 180;
-  light.shadow.camera.bottom = -100;
-  light.shadow.camera.left = -120;
-  light.shadow.camera.right = 120;
-  light.shadow.mapSize.width = 2048 * 2;
-  light.shadow.mapSize.height = 2048 * 2;
-  light.target = Barco;
-
-  scene.add(light);
-
-  niebla = new THREE.Fog(0x3aafa9, 50, 460);
+  niebla = new THREE.Fog(0x8ce7f4, 0, 750);
   scene.fog = niebla;
 
   composer = new THREE.EffectComposer(renderer);
@@ -132,78 +166,7 @@ function init() {
   composer.addPass(afterimagePass);
   //window.addEventListener( 'resize', onWindowResize, false );
 }
-/*
-function createGUI() {
-  var gui = new dat.GUI();
 
-  var parametro = {
-    "light color": light.color.getHex(),
-    "niebla color": niebla.color.getHex()
-  };
-
-  var geo = gui.addFolder("Geometria");
-  //geo.add(Barco.scale, 'x', 0.5, 1.5).name('Width').listen();
-  //geo.add(Barco.scale, 'y', 0.5, 1.5).name('Height').listen();
-  //geo.add(Barco.scale, 'z', 0.5, 1.5).name('Depth').listen();
-  geo
-    .add(params, "scale", 0.4, 1.2)
-    .name("Escala")
-    .onChange(function(value) {
-      setScale();
-    });
-
-  geo.open();
-
-  var sce = gui.addFolder("Escenario");
-  sce
-    .add(niebla, "near", 0, 400)
-    .name("Niebla Near")
-    .listen();
-  sce
-    .add(niebla, "far", 400, 1000)
-    .name("Niebla Far")
-    .listen();
-  sce
-    .add(light, "intensity", 0, 5)
-    .name("Intensidad Luz")
-    .listen();
-  sce
-    .addColor(parametro, "light color")
-    .name("Color Luz")
-    .onChange(function(val) {
-      light.color.setHex(val);
-      //render();
-    });
-
-  sce
-    .addColor(parametro, "niebla color")
-    .name("Color nie")
-    .onChange(function(val) {
-      niebla.color.setHex(val);
-      //render();
-    });
-
-  sce.open();
-  //sce.add(light.intensity, 1, 100).name('Luz').listen();
-
-  var post = gui.addFolder("Post-Proceso");
-  post
-    .add(afterimagePass.uniforms["damp"], "value", 0, 1)
-    .name("Valor")
-    .step(0.001);
-  post.add(proceso, "enable");
-  post.open();
-}*/
-
-function onWindowResize() {
-  camera.aspect = ancho / alto;
-  camera.updateProjectionMatrix();
-
-  renderer.setSize(ancho, alto);
-  composer.setSize(ancho, alto);
-}
-
-//
 var t = 0;
 function animate() {
   requestAnimationFrame(animate);
@@ -219,18 +182,23 @@ function animate() {
 
 				}*/
   t += 0.1;
-  Barco.position.y = 5 * Math.sin(t / 1.5);
-  Barco.position.x = 3 * Math.sin(t / 1.7);
-  Barco.position.z = 2 * Math.sin(t / 2.3);
+  //Barco.rotation.y = Math.sin(t / 100);
+  camera.position.y = 6 * Math.sin(t / 18);
+
+  //camera.position.x = 100 * Math.cos(t / 100);
+  //camera.position.z = 100 * Math.sin(t / 100);
+
+  camera.lookAt(scene.position);
   //object.translate.y += 1.0 + 0.3*Math.sin(dtime/300);
 
   //renderer.render( scene, camera );
 
-  if (proceso.enable) {
-    composer.render();
-  } else {
-    renderer.render(scene, camera);
-  }
+  //if (proceso.enable) {
+  //composer.render();
+  //} else {
+
+  renderer.render(scene, camera);
+  //}
 
   //stats.update();
 }

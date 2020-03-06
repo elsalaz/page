@@ -31,12 +31,25 @@ function init() {
   sceneM = new THREE.Scene();
   //scene.background = new THREE.Color( 0xa0a0a0 );
   //sceneM.fog = new THREE.Fog(0x3aafa9, 50, 400);
+  lightP1 = new THREE.PointLight(0xdd3ef0, 0.35);
+  lightP1.position.set(0, 300, 500);
+  sceneM.add(lightP1);
+  lightP2 = new THREE.PointLight(0x3ef0da, 0.35);
+  lightP2.position.set(500, 100, 0);
+  sceneM.add(lightP2);
+  lightP3 = new THREE.PointLight(0xdd3ef0, 0.35);
+  lightP3.position.set(0, 100, -500);
+  sceneM.add(lightP3);
+  lightP4 = new THREE.PointLight(0x3ef0da, 0.35);
+
+  lightP4.position.set(-500, 300, 500);
+  sceneM.add(lightP4);
 
   light = new THREE.HemisphereLight(0xffffff, 0x444444);
   light.position.set(0, 200, 0);
   sceneM.add(light);
 
-  light = new THREE.DirectionalLight(0xa0eee1, 1);
+  light = new THREE.DirectionalLight(0x3ef0da, 1);
   light.position.set(0, 200, 100);
   light.castShadow = true;
   light.shadow.camera.top = 180;
@@ -47,7 +60,7 @@ function init() {
   light.shadowMapHeight = 1024;
   sceneM.add(light);
 
-  var lightA = new THREE.AmbientLight(0xa0eee1, 0.7);
+  var lightA = new THREE.AmbientLight(0xa0eee1, 0.5);
 
   sceneM.add(lightA);
 
@@ -82,6 +95,8 @@ function init() {
 
     //scene.add( object );
     Materia.add(object);
+    Materia.rotation.y = 80 * (Math.PI / 180);
+
     sceneM.add(Materia);
   });
 
