@@ -1,0 +1,149 @@
+/* Galeria Renders */
+.galeria1 {
+  margin-top: 100px;
+  margin-bottom: 120px;
+}
+
+.galeria2 {
+  display: none;
+}
+
+.gallery-container {
+  width: 95%;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template:
+    "1fr 1fr 1fr 1fr 1fr" 35vh
+    "1fr 1fr 1fr 1fr 1fr" 35vh;
+}
+
+.gallery-container .box {
+  position: relative;
+  background: #ccc;
+  overflow: hidden;
+  transition-duration: 500ms;
+  transition-property: transform, filter;
+  transition-timing-function: ease-in;
+}
+
+.gallery-container .box.a {
+  grid-row: span 2;
+}
+
+.gallery-container .box.b {
+  grid-column: span 2;
+}
+
+.gallery-container .box.f {
+  grid-column: span 2;
+}
+
+.gallery-container .box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition-duration: 500ms;
+  transition-property: transform, filter;
+  transition-timing-function: ease-in;
+}
+
+.gallery-container .box img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.gallery-container:hover > .box {
+  filter: brightness(80%);
+}
+
+.gallery-container:hover > .box:hover {
+  filter: brightness(100%);
+}
+/* Responsive */
+@media (max-width: 1200px) {
+  .gallery-container {
+    grid-template:
+      "1fr 1fr 1fr" 220px
+      "1fr 1fr 1fr" 220px
+      "1fr 1fr 1fr" 220px
+      "1fr 1fr 1fr" 220px;
+  }
+  .gallery-container .box.a {
+    order: 1;
+  }
+
+  .gallery-container .box.b {
+    order: 2;
+  }
+
+  .gallery-container .box.c {
+    order: 7;
+  }
+
+  .gallery-container .box.d {
+    order: 4;
+  }
+
+  .gallery-container .box.e {
+    order: 3;
+    grid-column: span 2;
+  }
+  .gallery-container .box.f {
+    order: 6;
+  }
+  .gallery-container .box.g {
+    order: 5;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery-container {
+    grid-template:
+      "1fr" 37vh
+      "1fr" 37vh
+      "1fr" 37vh
+      "1fr" 37vh
+      "1fr" 37vh
+      "1fr" 37vh;
+  }
+  .gallery-container .box.a {
+    order: 1;
+  }
+
+  .gallery-container .box.b {
+    order: 2;
+  }
+
+  .gallery-container .box.c {
+    order: 3;
+  }
+
+  .gallery-container .box.d {
+    order: 4;
+  }
+
+  .gallery-container .box.e {
+    order: 5;
+  }
+  .gallery-container .box.f {
+    order: 6;
+  }
+  .gallery-container .box.g {
+    order: 7;
+  }
+}
+
+@media (max-width: 700px) {
+  .galeria1 {
+    display: none;
+  }
+  .galeria2 {
+    display: flex;
+  }
+
+  .album-img img {
+  }
+}
