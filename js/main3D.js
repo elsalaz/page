@@ -3,21 +3,21 @@ if (!Detector.webgl) Detector.addGetWebGLMessage();
 var container, stats, controls;
 var camera, scene, renderer, light;
 //document.body.appendChild( renderer.domElement );
-var ancho = 600;
-var alto = 600;
+var ancho = 550;
+var alto = 550;
 var startTime = Date.now();
 
 var niebla;
 
 var afterimagePass;
 var proceso = {
-  enable: true
+  enable: true,
 };
 
 var color;
 //var clock = new THREE.Clock();
 var params = {
-  scale: 1
+  scale: 1,
 };
 
 //var mixers = [];
@@ -54,7 +54,7 @@ function init() {
     //shininess: 30,
 
     opacity: 0.1,
-    transparent: true
+    transparent: true,
   });
 
   var geometry = new THREE.PlaneBufferGeometry(3000, 3000);
@@ -65,8 +65,8 @@ function init() {
   mesh2.receiveShadow = true;
   //scene.add(mesh2);
   var loader = new THREE.GLTFLoader();
-  loader.load("fbx/5/scene.gltf", function(gltf) {
-    gltf.scene.traverse(function(child) {
+  loader.load("fbx/5/scene.gltf", function (gltf) {
+    gltf.scene.traverse(function (child) {
       if (child.isMesh) {
         child.castShadow = true;
         child.receiveShadow = true;
@@ -85,8 +85,8 @@ function init() {
   });
 
   var loader = new THREE.FBXLoader();
-  loader.load("fbx/14.fbx", function(object) {
-    object.traverse(function(child) {
+  loader.load("fbx/14.fbx", function (object) {
+    object.traverse(function (child) {
       if (child.isMesh) {
         child.castShadow = true;
         child.receiveShadow = true;

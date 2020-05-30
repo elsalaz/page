@@ -150,3 +150,12 @@
 .table-grey tr:nth-child(even) {
   background-color: #e0f2f1;
 }
+
+.modal-header i {
+  transition-duration: 700ms;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}
+.modal-header i:hover {
+  transform: rotateY(360deg);
+}
