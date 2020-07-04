@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/styleResponsive.css" />
     <link rel="stylesheet" href="css/imgStyle.css" />
     <link rel="stylesheet" href="css/modalStyle.css" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Enriqueta|Montserrat|Merriweather|Arvo|Righteous|Ubuntu|Josefin+Sans|Lato|Varela+Round|Open+Sans:300|Galada|Spectral&display=swap"
       rel="stylesheet"
@@ -87,8 +88,8 @@
 
           <ul class="navbar-nav nav-flex-icons">
             <li class="nav-item">
-              <a href="https://www.facebook.com/andresfelipe.salazar2?ref=bookmarks" target="_blank" class="nav-link">
-                <i class="fab fa-facebook-f"></i>
+              <a href="https://www.artstation.com/elsalaz" target="_blank" class="nav-link">
+                <i class="fab fa-artstation"></i>
               </a>
             </li>
             <li class="nav-item">
@@ -124,11 +125,11 @@
               </p>
               <div class="text-center align-items-center">
                 <a
-                  href="https://sketchfab.com/andressalazar264"
+                  href="https://www.artstation.com/elsalaz"
                   target="_blank"
                   class="btn myButtonDark btn-lg text-white"
-                  > Sígueme<span><i class="fas fa-angle-right ml-2"></i></span><span><i class="fas fa-angle-right"></i></span></a
-                >
+                  > Sígueme<span><i class="fas fa-angle-right ml-2"></i></span><span><i class="fas fa-angle-right"></i></span>
+                </a>
               </div>
             </div>
             <div class="col-md-6 text-center wow bounceInRight elemento3D">
@@ -320,7 +321,7 @@
                     <p class="mt-3 text-center text-justify myTexto">Modelado y texturizado de personajes 3D usando el software Autodesk Maya.
                      </p>
                      <div class="text-center">
-                       <a href="#myModelados"><button class="btn btn-cyan">
+                       <a href="https://sketchfab.com/andressalazar264" target="_blank"><button class="btn btn-cyan">
                      Ver Más
                        </button></a>
                      </div>
@@ -396,7 +397,7 @@
     <section class="section el" data-bg="#FEFFFF">
       <div class="myModelados mt-1 mt-md-5 mb-5 mb-md-5" id="myModelados">
         <div class="container-fluid justify-content-center">
-            <div class="myTituloModelados text-center wow fadeIn">
+            <div class="myTituloModelados text-center">
               <h2 class="text-center myOpacity text-uppercase titulos myTextLight myOpacity">Modelados 3D <i class="fas fa-cubes mr-2"></i></h2>
               </div>
               <div class="wrapper mt-2  mt-md-5">
@@ -442,13 +443,13 @@
     <section class="section el" data-bg="#DEF2F1">
       <div class="myAplicaciones mt-md-5 mb-3 mb-md-5" id="myAplicaciones">
         <div class="container">
-            <div class="myTituloAplicaciones text-center wow fadeIn">
+            <div class="myTituloAplicaciones text-center">
                 <h2 class="text-center myOpacity text-uppercase titulos myTextDark myOpacity">Aplicaciones <i class="fas fa-laptop-code"></i></h2>
               </div>
               
 
             <!--Carousel Wrapper-->
-<div id="carousel-example-1z" class="carousel slide wow fadeIn" data-ride="carousel">
+<div id="carousel-example-1z" class="carousel slide" data-ride="carousel">
   
   <!--Slides-->
   <div class="carousel-inner mb-5" role="listbox">
@@ -457,7 +458,7 @@
       <div class="row justify-content-center mt-5 mb-5">
         <div class="col-md-6 justify-content-center">
                 <div class="view overlay zoom">
-                <img src="img/app.jpg" class="img-fluid " alt="zoom">
+                <img src="img/appOMNI.png" class="img-fluid " alt="zoom">
                 </div>
         </div>
         <div class="col-md-6 text-center text-md-left mt-4 mt-md-0">
@@ -500,7 +501,7 @@
       <div class="row justify-content-center mt-5 mb-5">
         <div class="col-md-6 justify-content-center">
                 <div class="view overlay zoom">
-                <img src="img/progress.jpg" class="img-fluid " alt="zoom">
+                <img src="img/meeseekApp.jpg" class="img-fluid " alt="zoom">
                 </div>
         </div>
         <div class="col-md-6 text-left mt-4 mt-md-0">
@@ -523,14 +524,21 @@
                     <i class="far light-green-text fa-check-square"></i>
                     <span class="text ml-1 mySpantext myOpacity myTexto">Aplicación interactiva</span>
                   </li>
+                  <a href="https://drive.google.com/uc?id=1tKMbu8AJyv9GRpyLxUooSfLgxRoA_upr&export=download"
+                    target="_blank"
+                    class="light-green-text">
                   <li class="mylist-group-item align-items-center mt-1">
                     <i class="fab light-green-text fa-android"></i>
                     <span class="text ml-1 mySpantext myOpacity myTexto">Descargar para Android</span>
-                  </li>
+                  </li></a>
                 </ul>
                 <div class="ml-4 text-center text-md-left">
-                <button type="button" class="btn deep-blue-gradient text-white">Ver más</button>
-                </div>
+                  <a
+                    href=""
+                    data-toggle="modal"
+                    data-target="#Modal-Meeseks" 
+                   class="btn deep-blue-gradient text-white">Vér mas</a>
+                  </div>
         </div>
       </div>
     </div>
@@ -556,58 +564,60 @@
 <!--MyRender-->
     <section class="section el" data-bg="#FEFFFF">
       <div class="MyRenders mt-5 mb-5" id="MyRenders">
-        <div class="container-fluid">
-        <h2 class="myTituloGaleria justify-content-center text-center myOpacity text-uppercase titulos myTextLight mt-5 mb-5 wow fadeIn">Galería <i class="far fa-image mr-3"></i></h2>
 
-        <div class="row galeria1 justify-content-center wow fadeIn">
+        <div class="container-fluid">
+        <h2 class="myTituloGaleria justify-content-center text-center myOpacity text-uppercase titulos myTextLight mt-5 mb-5">Galería <i class="far fa-image mr-3"></i></h2>
+
+        <div class="row galeria1 justify-content-center">
         <div class="gallery-container z-depth-5">
-          <div class="box a">
-            <a href="" data-toggle="modal" data-target="#ModalCM">
-            <img src="img2/cm.jpg" />
-            </a>
-          </div>
-          <div class="box b">
-            <a href="" data-toggle="modal" data-target="#ModalAT">
-            <img src="img2/at.jpg" />
-            </a>
-          </div>
-          <div class="box c">
-            <a href="" data-toggle="modal" data-target="#ModalBarco">
-            <img src="img2/barco-G.gif" />
-            </a>
-          </div>
-          <div class="box d">
-            <a href="" data-toggle="modal" data-target="#ModalFly">
-            <img src="img2/fly.jpg" />
-            </a>
-          </div>
-          <div class="box e">
-            <a href="" data-toggle="modal" data-target="#ModalPsy">
-            <img src="img2/psy.jpg" />
-            </a>
-          </div>
-          <div class="box f">
-            <a href="" data-toggle="modal" data-target="#ModalVT">
-            <img src="img2/vt.jpg" />
-            </a>
-          </div>
-          <div class="box g">
-            <a href="" data-toggle="modal" data-target="#ModalGreyMatter">
-            <img src="img2/gm.jpg" />
-            </a>
-          </div>
+            <div class="box a">
+                <a href="" data-toggle="modal" data-target="#ModalCM">
+                <img src="img/cm.jpg" />
+                </a>
+            </div>
+            <div class="box b">
+                <a href="" data-toggle="modal" data-target="#ModalAT">
+                <img src="img/at.jpg" />
+                </a>
+            </div>
+            <div class="box c">
+                <a href="" data-toggle="modal" data-target="#ModalBarco">
+                <img src="img/barco-G.gif" />
+                </a>
+            </div>
+            <div class="box d">
+                <a href="" data-toggle="modal" data-target="#ModalFly">
+                <img src="img/fly.jpg" />
+                </a>
+            </div>
+            <div class="box e">
+                <a href="" data-toggle="modal" data-target="#ModalPsy">
+                <img src="img/psy.jpg" />
+                </a>
+            </div>
+            <div class="box f">
+                <a href="" data-toggle="modal" data-target="#ModalVT">
+                <img src="img/vt.jpg" />
+                </a>
+            </div>
+            <div class="box g">
+                <a href="" data-toggle="modal" data-target="#ModalGreyMatter">
+                <img src="img/gm.jpg" />
+                </a>
+            </div>
         </div>
         </div>
 
         
 
-        <div class="row galeria2 justify-content-center mb-5 wow fadeIn">
+        <div class="row galeria2 justify-content-center mb-5">
           <div class="col-md-12">
             <div class="single-album z-depth-4">
-              <div class="album-img">
-                  <a href="" data-toggle="modal" data-target="#centralModalSm1">
-                  <img src="img2/at.jpg" class="img-fluid  z-depth-2">
-                  </a>
+              <div class="album-img view overlay">
+                  <img src="img/at.jpg" class="img-fluid  z-depth-2">
+                  <div
+                   class="mask waves-effect waves-light rgba-white-slight"
+                  ></div>
               </div>
             </div>
               <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle">Adventure Time</h5>
@@ -616,61 +626,61 @@
           <div class="col-md-12">
             <div class="single-album z-depth-4">
               <div class="album-img view overlay">
-                  <img src="img2/psy.jpg" class="img-fluid  z-depth-2">
+                  <img src="img/psy.jpg" class="img-fluid  z-depth-2">
                   <div
                    class="mask waves-effect waves-light rgba-white-slight"
                   ></div>
               </div>
             </div>
-              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle" data-text="Adventure Time">Psyduck</h5>
+              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle">Psyduck</h5>
           </div>
 
           <div class="col-md-12">
             <div class="single-album z-depth-4">
               <div class="album-img view overlay">
-                  <img src="img2/gm.jpg" class="img-fluid  z-depth-2">
+                  <img src="img/gm.jpg" class="img-fluid  z-depth-2">
                   <div
                    class="mask waves-effect waves-light rgba-white-slight"
                   ></div>
               </div>
             </div>
-              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle" data-text="Adventure Time">Grey Matter</h5>
+              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle">Grey Matter</h5>
           </div>
 
           <div class="col-md-12">
             <div class="single-album z-depth-4">
               <div class="album-img view overlay">
-                  <img src="img2/barco-horizontal.jpg" class="img-fluid  z-depth-2">
+                  <img src="img/barco-horizontal.jpg" class="img-fluid  z-depth-2">
                   <div
                    class="mask waves-effect waves-light rgba-white-slight"
                   ></div>
               </div>
             </div>
-              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle" data-text="Adventure Time">Barco</h5>
+              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle">Barco</h5>
           </div>
 
           <div class="col-md-12">
             <div class="single-album z-depth-4">
               <div class="album-img view overlay">
-                  <img src="img2/vt.jpg" class="img-fluid  z-depth-2">
+                  <img src="img/vt.jpg" class="img-fluid  z-depth-2">
                   <div
                    class="mask waves-effect waves-light rgba-white-slight"
                   ></div>
               </div>
             </div>
-              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle" data-text="Adventure Time">Victreebel</h5>
+              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle">Victreebel</h5>
           </div>
 
           <div class="col-md-12">
             <div class="single-album z-depth-4">
               <div class="album-img view overlay">
-                  <img src="img2/fly-horizontal.jpg" class="img-fluid  z-depth-2">
+                  <img src="img/fly-horizontal.jpg" class="img-fluid  z-depth-2">
                   <div
                    class="mask waves-effect waves-light rgba-white-slight"
                   ></div>
               </div>
             </div>
-              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle" data-text="Adventure Time">Gromflomitte</h5>
+              <h5 class="mt-5 mb-5 text-center text-uppercase font-weight-bold blue-grey-text myRTitle">Gromflomitte</h5>
           </div>
         </div>
 
@@ -814,7 +824,7 @@ aria-hidden="true">
     <div class="modal-body">
       <div class="text-center">
         <div class="view overlay animated zoomIn">
-            <img src="img2/cm-horizontal.jpg" class="img-fluid mb-4">
+            <img src="img/cm-horizontal.jpg" class="img-fluid mb-4">
             <a href="#!">
               <div class="mask rgba-white-slight"></div>
             </a>
@@ -836,6 +846,13 @@ aria-hidden="true">
           <td><span class="font-weight-bold table-text">23/04/2020</span></td>
         </tr>
       </table>
+      </div>
+      <div class="text-right animated fadeIn">
+        <a href="https://www.artstation.com/artwork/AqqlZ5"
+        target="_blank"
+        class="btn pink accent-2 btn-sm mr-4 text-white">
+           Ver en<span><i class="fab fa-artstation fa-lg ml-2"></i></span></button>
+        </a>  
       </div>
 
     </div>
@@ -865,7 +882,7 @@ aria-hidden="true">
      <div class="modal-body">
        <div class="text-center">
          <div class="view overlay animated zoomIn">
-             <img src="img2/at.jpg" class="img-fluid mb-4">
+             <img src="img/at.jpg" class="img-fluid mb-4">
              <a href="#!">
                <div class="mask rgba-white-slight"></div>
              </a>
@@ -888,6 +905,13 @@ aria-hidden="true">
          </tr>
        </table>
        </div>
+       <div class="text-right animated fadeIn">
+        <a href="https://www.artstation.com/artwork/xJJDYm"
+        target="_blank"
+        class="btn unique-color btn-sm mr-4 text-white">
+           Ver en<span><i class="fab fa-artstation fa-lg ml-2"></i></span></button>
+        </a>  
+      </div>
  
      </div>
      
@@ -939,6 +963,13 @@ aria-hidden="true">
          </tr>
        </table>
        </div>
+       <div class="text-right animated fadeIn">
+        <a href="https://www.artstation.com/artwork/5XXvXg"
+        target="_blank"
+        class="btn cyan accent-4 btn-sm mr-4 text-white">
+           Ver en<span><i class="fab fa-artstation fa-lg ml-2"></i></span></button>
+        </a>  
+        </div>
  
      </div>
      
@@ -967,7 +998,7 @@ aria-hidden="true">
      <div class="modal-body">
        <div class="text-center">
          <div class="view overlay animated zoomIn">
-             <img src="img2/fly-horizontal.jpg" class="img-fluid mb-4">
+             <img src="img/fly-horizontal.jpg" class="img-fluid mb-4">
              <a href="#!">
                <div class="mask rgba-white-slight"></div>
              </a>
@@ -990,6 +1021,13 @@ aria-hidden="true">
          </tr>
        </table>
        </div>
+       <div class="text-right animated fadeIn">
+        <a href="https://www.artstation.com/artwork/3dde5g"
+        target="_blank"
+        class="btn lime btn-sm mr-4 text-white">
+           Ver en<span><i class="fab fa-artstation fa-lg ml-2"></i></span></button>
+        </a>  
+        </div>
  
      </div>
      
@@ -1019,7 +1057,7 @@ aria-hidden="true">
  
          <div class="text-center">
           <div class="view overlay animated zoomIn">
-            <img src="img2/psy.jpg" class="img-fluid mb-4">
+            <img src="img/psy.jpg" class="img-fluid mb-4">
             <a href="#!">
               <div class="mask rgba-white-slight"></div>
             </a>
@@ -1041,6 +1079,13 @@ aria-hidden="true">
             <td><span class="font-weight-bold table-text">20/05/2020</span></td>
           </tr>
         </table>
+        </div>
+        <div class="text-right animated fadeIn">
+          <a href="https://www.artstation.com/artwork/ZGGdKm"
+          target="_blank"
+          class="btn cyan accent-4 btn-sm mr-4 text-white">
+             Ver en<span><i class="fab fa-artstation fa-lg ml-2"></i></span></button>
+          </a>  
         </div>
   
       </div>
@@ -1071,7 +1116,7 @@ aria-hidden="true">
    
            <div class="text-center">
             <div class="view overlay animated zoomIn">
-              <img src="img2/vt.jpg" class="img-fluid mb-4">
+              <img src="img/vt.jpg" class="img-fluid mb-4">
               <a href="#!">
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -1093,6 +1138,13 @@ aria-hidden="true">
               <td><span class="font-weight-bold table-text">02/04/2020</span></td>
             </tr>
           </table>
+          </div>
+          <div class="text-right animated fadeIn">
+            <a href="https://www.artstation.com/artwork/zOOK5L"
+            target="_blank"
+            class="btn yellow darken-1 btn-sm mr-4 text-white">
+               Ver en<span><i class="fab fa-artstation fa-lg ml-2"></i></span></button>
+            </a>  
           </div>
     
         </div>
@@ -1145,6 +1197,13 @@ aria-hidden="true">
          </tr>
        </table>
        </div>
+       <div class="text-right animated fadeIn">
+        <a href="https://www.artstation.com/artwork/mDDvrE"
+        target="_blank"
+        class="btn teal btn-sm mr-4 text-white">
+           Ver en<span><i class="fab fa-artstation fa-lg ml-2"></i></span></button>
+        </a>  
+      </div>
  
      </div>
      
@@ -1154,119 +1213,64 @@ aria-hidden="true">
  </div>
 <!-- Modal-GreyMatter -->
 
-<!-- Modal-2 -->
-<div class="modal fade" id="centralModalSm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
+<!-- Modal-MeeseekApp -->
+<div class="modal fade" id="Modal-Meeseks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
 
-  <!-- Change class .modal-sm to change the size of the modal -->
-  <div class="modal-dialog modal-lg container" role="document">
+<!-- Change class .modal-sm to change the size of the modal -->
+<div class="modal-dialog modal-lg container" role="document">
 
 
-    <div class="modal-content myTexto">
-      <div class="modal-header info-color">
-        <h3 class="ml-1 modal-title w-100 text-uppercase font-weight-bold text-white myTextoM" id="myModalLabel">Psyduck <i class="fas fa-kiwi-bird ml-1"></i></h3>
-        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+  <div class="modal-content">
+    <div class="modal-header cyan accent-4">
+      <h3 class="ml-1 modal-title w-100 text-uppercase font-weight-bold text-white font-cm" id="myModalLabel">Meeseeks App <i class="fas fa-vr-cardboard"></i></h3>
+      <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+       <div class="text-center">
+        <div class="mb-4">
+             <div class="embed-responsive embed-responsive-16by9">
+                 <iframe class="embed-responsive-item animated zoomIn" src="https://www.youtube.com/embed/pkCKEXVr3j8"
+                 allowfullscreen></iframe>
+             </div>
+         </div>
+       </div>
+       
+      <div class="table-cyan animated bounceInUp mb-4">
+      <table class="z-depth-2 m-auto">
+        <tr>
+          <th class="blue cyan"><span class="font-weight-bold white-text table-text">Tipo:</span></th>
+          <td><span class="font-weight-bold table-text">Aplicación</span></td>
+        </tr>
+        <tr>
+          <th class="blue cyan"><span class="font-weight-bold white-text table-text">Herramienta:</span></th>
+          <td><span class="font-weight-bold table-text">Unity(Vuforia)</span></td>
+        </tr>
+        <tr>
+          <th class="blue cyan"><span class="font-weight-bold white-text table-text">Fecha:</span></th>
+          <td><span class="font-weight-bold table-text">27/06/2020</span></td>
+        </tr>
+      </table>
       </div>
-      <div class="modal-body">
-        <div class="text-center">
-          <div class="view overlay animated zoomIn">
-              <img src="img/Render2.jpg" class="img-fluid mb-4">
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-          </div>
-        </div>
-        <div class="MyHerramientas myTexto">
-        <div class="row ml-1">
-          <div class="col-md-5">
-            <p class="ml-2 text-left text-uppercase pink-text font-weight-bolder">Tipo: </p>
-          </div>
-          <div class="col-md-5">
-              <p class="text-left text-body">Render</p>
-            </div>
-        </div>
-        <div class="row ml-1">
-          <div class="col-md-5">
-            <p class="ml-2 text-left text-uppercase pink-text font-weight-bolder">Herramienta: </p>
-          </div>
-          <div class="col-md-5">
-              <p class="text-left text-body">Maya 2018</p>
-            </div>
-        </div>
-        <div class="row ml-1">
-          <div class="col-md-5">
-            <p class="ml-2 text-left text-uppercase pink-text font-weight-bolder">Fecha: </p>
-          </div>
-          <div class="col-md-5">
-              <p class="text-left text-body">16/01/2020</p>
-            </div>
-        </div>
+      <div class="text-right animated fadeIn">
+        <a href="https://www.artstation.com/artwork/QrrwRd"
+        target="_blank"
+        class="btn cyan btn-sm mr-4 text-white">
+           Ver en<span><i class="fab fa-artstation fa-lg ml-2"></i></span></button>
+        </a>  
       </div>
-      </div>
-      
-      </div>
+    </div>
+    
     </div>
   </div>
 </div>
-<!-- Modal-2 -->
- 
-<!-- Modal-3 -->
-<div class="modal fade" id="centralModalSm3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-
-  <!-- Change class .modal-sm to change the size of the modal -->
-  <div class="modal-dialog modal-lg container" role="document">
-
-
-    <div class="modal-content myTexto">
-      <div class="modal-header teal darken-1">
-        <h3 class="ml-1 modal-title w-100 text-uppercase font-weight-bold text-white myTextoM" id="myModalLabel">Grey Matter <i class="fas fa-atom ml-1"></i></h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="white-text">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="text-center mb-3">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item animated zoomIn" src="https://www.youtube.com/embed/W1laEGmNZ5Q"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="MyHerramientas myTexto">
-        <div class="row ml-1">
-          <div class="col-md-5">
-            <p class="ml-2 text-left text-uppercase pink-text font-weight-bolder">Tipo: </p>
-          </div>
-          <div class="col-md-5">
-              <p class="text-left text-body">Render</p>
-            </div>
-        </div>
-        <div class="row ml-1">
-          <div class="col-md-5">
-            <p class="ml-2 text-left text-uppercase pink-text font-weight-bolder">Herramienta: </p>
-          </div>
-          <div class="col-md-5">
-              <p class="text-left text-body">Maya 2018</p>
-            </div>
-        </div>
-        <div class="row ml-1">
-          <div class="col-md-5">
-            <p class="ml-2 text-left text-uppercase pink-text font-weight-bolder">Fecha: </p>
-          </div>
-          <div class="col-md-5">
-              <p class="text-left text-body">24/01/2020</p>
-            </div>
-        </div>
-        </div>
-      </div>
-      
-      </div>
-    </div>
-  </div>
 </div>
-<!-- Modal-3 -->
+<!-- Modal-MeeseekApp -->
+
+
 
 <!-- Modals -->
 
