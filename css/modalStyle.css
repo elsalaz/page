@@ -151,6 +151,31 @@
   background-color: #e0f2f1;
 }
 
+/* Modal Orange */
+.table-orange table {
+  width: 95%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid rgba(245, 124, 0, 0.1);
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  text-align: center;
+  background: #fafafa;
+}
+
+.table-orange th {
+  text-transform: uppercase;
+  border: 1px solid rgba(245, 124, 0, 0.5);
+  padding: 8px 10px;
+}
+.table-orange td {
+  color: #455a64;
+  padding: 8px 10px;
+}
+.table-orange tr:nth-child(even) {
+  background-color: #fff3e0;
+}
+
 .modal-header i {
   transition-duration: 700ms;
   transition-property: transform;

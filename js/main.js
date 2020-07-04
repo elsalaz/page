@@ -1,11 +1,10 @@
 new WOW().init();
 
-window.onload = function() {
+window.onload = function () {
   loader();
 };
 
 function loader() {
-  //alert("Hello! I am an alert box!!");
   document.getElementById("myLoader").remove();
   document.getElementById("myNavbar").style.display = "flex";
   document.getElementById("myInicio").style.display = "flex";
