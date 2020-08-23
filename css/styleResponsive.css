@@ -78,6 +78,10 @@
     margin-top: 100px;
     margin-bottom: 80px;
   }
+
+  .sectionModelados {
+    display: none;
+  }
 }
 
 @media (max-width: 770px) {
