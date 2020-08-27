@@ -1,6 +1,6 @@
 #my3M {
-  height: 500px;
-  width: 500px;
+  height: 100%;
+  width: 100%;
 }
 @media (max-width: 1400px) {
   .display-3 {
@@ -38,7 +38,6 @@
     display: none;
   }
   .elemento3D {
-    display: none;
   }
 }
 
@@ -89,7 +88,7 @@
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 767px) {
   .TheModel {
     height: 300px;
     width: 300px;
@@ -103,6 +102,10 @@
 
   .nav-pills > li > a {
     font-size: 17px;
+  }
+
+  .elemento3D {
+    display: none;
   }
 }
 
