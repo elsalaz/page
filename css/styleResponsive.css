@@ -1,3 +1,7 @@
+#my3M {
+  height: 500px;
+  width: 500px;
+}
 @media (max-width: 1400px) {
   .display-3 {
     font-size: 360%;
@@ -5,9 +9,6 @@
 }
 
 @media (max-width: 1200px) {
-  .elemento3D {
-    display: none;
-  }
 }
 
 @media (max-width: 1150px) {
@@ -17,9 +18,6 @@
   }
 }
 @media (max-width: 1070px) {
-  .MyImagen {
-    display: none;
-  }
   .TheModel {
     height: 330px;
     width: 450px;
@@ -35,6 +33,12 @@
   .TheModel {
     height: 310px;
     width: 420px;
+  }
+  .MyImagen {
+    display: none;
+  }
+  .elemento3D {
+    display: none;
   }
 }
 
@@ -63,6 +67,7 @@
     height: 320px;
     width: 320px;
   }
+
   .MyHerramientas {
     display: none;
   }
