@@ -9,6 +9,8 @@ var startTime = Date.now();
 
 var niebla;
 
+let pass2;
+
 var afterimagePass;
 var proceso = {
   enable: true,
@@ -27,7 +29,6 @@ init();
 animate();
 
 function init() {
-  container = document.getElementById("my3D");
   Barco = new THREE.Object3D();
 
   //document.body.appendChild(container);
@@ -40,6 +41,14 @@ function init() {
   //camera.rotation.y = (90 * Math.PI) / 180;
 
   scene = new THREE.Scene();
+
+  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(ancho, alto);
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFShadowMap;
+  container = document.getElementById("my3D");
+  container.appendChild(renderer.domElement);
   //scene.background = new THREE.Color(0x3aafa9);
 
   // scene.add( new THREE.CameraHelper( light.shadow.camera ) );
@@ -81,29 +90,8 @@ function init() {
     Barco.castShadow = true;
     Barco.receiveShadow = true;
     scene.add(Barco);
-    animate();
+    //animate();
   });
-
-  var loader = new THREE.FBXLoader();
-  loader.load("fbx/14.fbx", function (object) {
-    object.traverse(function (child) {
-      if (child.isMesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
-      }
-    });
-
-    //Barco.add(object);
-
-    //scene.add(Barco);
-  });
-
-  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(ancho, alto);
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFShadowMap;
-  container.appendChild(renderer.domElement);
 
   window.addEventListener("resize", onWindowResize, false);
 
@@ -160,15 +148,43 @@ function init() {
   scene.fog = niebla;
 
   composer = new THREE.EffectComposer(renderer);
-  composer.addPass(new THREE.RenderPass(scene, camera));
-  afterimagePass = new THREE.AfterimagePass();
-  afterimagePass.renderToScreen = true;
-  composer.addPass(afterimagePass);
-  //window.addEventListener( 'resize', onWindowResize, false );
+  renderPass = new THREE.RenderPass(scene, camera);
+  composer.addPass(renderPass);
+
+  //effectRGB = new THREE.ShaderPass(THREE.DotScreenShader);
+  //effectRGB.uniforms["scale"].value = 10000;
+  //effectRGB.uniforms["angle"].value = 10;
+  //composer.addPass(effectRGB);
+
+  pass2 = new THREE.GlitchPass(0);
+  composer.addPass(pass2);
+
+  effectRGB = new THREE.ShaderPass(THREE.RGBShiftShader);
+  //effectRGB.uniforms["amount"].value = 0.005;
+
+  //var fxaaPass = new THREE.ShaderPass(THREE.FXAAShader);
+
+  composer.addPass(effectRGB);
+
+  effectRGB.renderToScreen = true;
+
+  //EstaEs();
+  animate();
+  //onWindowResize();
+
+  //window.addEventListener("resize", onWindowResize, false);
+}
+
+function onWindowResize() {
+  camera.aspect = container.offsetWidth / container.offsetWidth;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(container.offsetWidth, container.offsetWidth);
 }
 
 var t = 0;
 function animate() {
+  onWindowResize();
   requestAnimationFrame(animate);
   var dtime = Date.now() - startTime;
 
@@ -194,10 +210,10 @@ function animate() {
   //renderer.render( scene, camera );
 
   //if (proceso.enable) {
-  //composer.render();
+  composer.render();
   //} else {
 
-  renderer.render(scene, camera);
+  //renderer.render(scene, camera);
   //}
 
   //stats.update();
